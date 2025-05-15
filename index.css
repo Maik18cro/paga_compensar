@@ -24,7 +24,7 @@
 
 main .page-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -128,8 +128,9 @@ main .page-container {
             color: var(--color-black);
             font-size: 14px;
             font-weight: 400;
-            text-decoration: none;
             font-style: italic;
+            text-decoration: none;
+            
             line-clamp: 1;
             overflow: hidden;
 
@@ -144,12 +145,10 @@ main .page-container {
 .header__menu .header__menu-secondary__list {
     li a {
         font-weight: 700;
-        color: inherit;
         text-decoration: none;
-        padding: 30px 0;
-        display: block;
+        padding: 30px 20px;
         font-size: 18px;
-
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
         &:hover {
             text-decoration: none;
             color: var(--color-primary);
@@ -179,10 +178,10 @@ main .page-container {
     grid-template-columns:repeat(2, 1fr);
     gap: 20px;
     margin: 0 auto;
-    max-width: 1150px;
+    max-width: 1400px;
     padding: 40px 0 5px;
     
-    & .career__information__section1{
+    & .career__information__section-one{
         & .career__information__span {
             text-align: center;
             position: relative;
@@ -203,6 +202,7 @@ main .page-container {
                 position: absolute;
                 left: 0;
                 width: 100%;
+                width: 600px;
                 height: 1px;
                 background: var(--color-secondary);
                 top: 14px;
@@ -213,9 +213,11 @@ main .page-container {
             
             & .career__information__software--title {
                 font-size:60px;
+                max-width:600px;
                 color: var(--color-clear-black);
-                font-weight: 1200px;
-                margin:10px 0px;
+                font-weight: 900px;
+                line-height: 65px;
+                margin:20px 0px;
             }
             & .career__information__software--text {
                 font-size: 18px;
@@ -261,7 +263,16 @@ main .page-container {
             }
         }
     }
-    & .career__information__section2 {
+    & .career__information__section-two {
+        & .career__information__details--image {
+            img {
+                width: 80%;
+                margin: 75px 10% 0;
+                height: auto;
+                border-radius: 25px;
+            }
+
+        }
         
         & .career__information__details--text {
             background-color: #617989;
@@ -515,17 +526,21 @@ main .page-container {
 
 /* <!-- profile and become an expert  --> */
 .profile_expert {
-    max-width: 1150px;
+    max-width: 1400px;
     margin: 0px auto 10px;
     padding: 30px 20px 5px;
     width: 100%;
     & .profile_expert_content {
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        padding-bottom: 30px;
+        border-bottom: var(--color-primary) 2px solid;
         & .profile_expert_content-profile {
-            max-width: 600px;
+            max-width: 700px;
             & img{
             border-radius:25px;
+            width: 690px;
+            }
             }
             & .profile_expert_content-profile-title {
                 color: var(--color-secondary);
@@ -545,7 +560,157 @@ main .page-container {
             }
         & .profile_expert_content-expert {
             max-width: 600px;
+            & h3 {
+                margin-left: 200px;
+            }
+            & .profile_expert_content-expert-list {
+                list-style: none;
+                margin-left: 100px;
+                font-size: 18px;
+                margin-top: 80px;
+                & li {
+                   padding-bottom: 25px;
+                    &::before {
+                        content: '';
+                        display:inline-block ;
+                        height: 8px;
+                        width: 8px;
+                        border-radius: 50%;
+                        background: #ff6600;
+                        margin-right: 25px;
+                        top: 12px;
+                        left: 0px;
+
+                    }
+                }
+            }  
+        & .profile_expert_content-expert-flat {
+            width: 338px;
+            height: 48px;
+            background:#446d89;
+            color:var(--color-white);
+            font-size: 18px;
+            line-height: 32px;
+            display: block;
+            text-decoration: none;
+            
+            margin-left: 100px;
+            max-width: 100%;
+            &::before {
+                    background: #2c90e8 url(https://ucompensar.edu.co/wp-content/themes/wp-compensar/assets/img/down-arrow.svg) no-repeat center;
+                    content: '';
+                    width: 56px;
+                    height: 48px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    right: 50px;
+                    margin-right: 10px;
+                    bottom: 0px;
+                    
+            }
+            &:hover {
+                color: #0056b3;
+                transition: all 0.5s ease-in-out;
+            }
+        }   
+    }
+}
+ .profile_expert-imagen {
+    background-image: url(https://ucompensar.edu.co/wp-content/uploads/2024/11/nuevo-campus-back-2.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50px;
+    margin: 60px 0px 40px 0px;  
+}
+/* Footer */
+.footer {
+    background-color: #4e5357;
+    padding: 80px 0px 0px 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    & .footer_contact {
+        max-width: 500px;
+        & .footer_contact-image {
+            width: 350px;
+            margin: 30px;
+        }
+        & p {
+            margin: 0px 0px 15px 0px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 24px;
+            color: var(--color-white);
+        }
+        & .footer_contact-text {
+            color: var(--color-secondary);
+            text-decoration: underline;
+            transition: all 0.3s ease;
+            font-size: 12px;
+            &:hover {
+                text-decoration: none;
+                color: #0056b3;
+            }
+        }
+        & .footer_contact-social {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            & h3 {
+                max-width: 300px;
+                margin: 40px 0px ;
+                color: var(--color-white);
+                font-size: 16px;
+            }
+            & .footer_contact-social-list {
+                display: inline-flex;
+                list-style: none;
+                justify-content: center;
+                font-size: 19px;
+                & li {
+                    margin: 5px;
+                    margin-top: 40px;
+                }
+                
+                
+            }
+        }
+    }
+    & .footer_address {
+        width: 100%;
+        background-color: #707070;
+        padding: 20px;
+        border-radius: 15px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        & .footer_address-content {
+            margin: 0px 5px;
+            max-width: 400px;
+        }
+        & .footer_address-title {
+            font-size: 23px;
+            color: var(--color-secondary);
+        }
+        & .footer_address-text {
+            margin-top: 20px;
+            color: var(--color-white);
+            font-size: 12px;
+            line-height: 24px;
+
+        }
+        & .footer_address-text-line {
+            margin-top: 20px;
+            color: var(--color-white);
+            font-size: 12px;
+            line-height: 24px;
+            max-width: 140px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: var(--color-white) 1px solid;
         }
     }
 
 }
+
+
+
+
