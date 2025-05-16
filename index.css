@@ -373,7 +373,7 @@ main .page-container {
                     z-index: -1;
                     position:relative;
                     right: 140px;
-                    padding: 100px;
+                    
                     
                 }
                 & label {
@@ -697,6 +697,7 @@ main .page-container {
             padding: 20px;
             border-radius: 15px;
             margin: 0px 30px ;
+            max-width: 1000px;
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             & .footer_address-content {
