@@ -40,6 +40,7 @@ main .page-container {
 
 /* Buttons */
 .btn__work-with-us {
+    list-style: none;
     border-radius: 2em;
     color: var(--color-white) !important;
     background-color: var(--color-primary);
@@ -366,8 +367,27 @@ main .page-container {
             gap:10px;
             width: 100%;
 
-            & .information-form__checkbox__input {
-                float: left;
+            & .information-form__checkbox {
+                & input{
+                    box-sizing: border-box;
+                    z-index: -1;
+                    position:relative;
+                    right: 140px;
+                    padding: 100px;
+                    
+                }
+                & label {
+                    font-size: 12px;
+                    color: var(--color-black);
+                    & a {
+                        color: var(--color-black);
+                        font-size: 11px;
+                        text-decoration-line:underline ;
+                    }
+
+                }
+                
+            
                 
                 
                 
@@ -569,7 +589,7 @@ main .page-container {
                 font-size: 18px;
                 margin-top: 80px;
                 & li {
-                   padding-bottom: 25px;
+                    padding-bottom: 25px;
                     &::before {
                         content: '';
                         display:inline-block ;
@@ -580,7 +600,6 @@ main .page-container {
                         margin-right: 25px;
                         top: 12px;
                         left: 0px;
-
                     }
                 }
             }  
@@ -615,7 +634,7 @@ main .page-container {
         }   
     }
 }
- .profile_expert-imagen {
+.profile_expert-imagen {
     background-image: url(https://ucompensar.edu.co/wp-content/uploads/2024/11/nuevo-campus-back-2.webp);
     background-size: cover;
     background-position: center center;
@@ -626,89 +645,145 @@ main .page-container {
 /* Footer */
 .footer {
     background-color: #4e5357;
-    padding: 80px 0px 0px 200px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    & .footer_contact {
-        max-width: 500px;
-        & .footer_contact-image {
-            width: 350px;
-            margin: 30px;
-        }
-        & p {
-            margin: 0px 0px 15px 0px;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 24px;
-            color: var(--color-white);
-        }
-        & .footer_contact-text {
-            color: var(--color-secondary);
-            text-decoration: underline;
-            transition: all 0.3s ease;
-            font-size: 12px;
-            &:hover {
-                text-decoration: none;
-                color: #0056b3;
+    padding: 80px 30px 30px 30px ;
+    & .footer_contact_address {
+        padding-bottom:50px;
+        display: flex;
+        & .footer_contact {
+            max-width: 500px;
+            & .footer_contact-image {
+                width: 350px;
+                margin: 40px;
             }
-        }
-        & .footer_contact-social {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            & h3 {
-                max-width: 300px;
-                margin: 40px 0px ;
+            & p {
+                margin: 0px 0px 15px 0px;
+                font-weight: 400px;
+                font-size: 12px;
+                line-height: 24px;
                 color: var(--color-white);
-                font-size: 16px;
             }
-            & .footer_contact-social-list {
-                display: inline-flex;
-                list-style: none;
-                justify-content: center;
-                font-size: 19px;
-                & li {
-                    margin: 5px;
-                    margin-top: 40px;
+            & .footer_contact-text {
+                color: var(--color-secondary);
+                text-decoration: underline;
+                transition: all 0.3s ease;
+                font-size: 12px;
+                &:hover {
+                    text-decoration: none;
+                    color: #0056b3;
                 }
-                
-                
+            }
+            & .footer_contact-social {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                & h3 {
+                    margin:40px 0px ;
+                    color: var(--color-white);
+                    font-size: 16px;
+                }
+                & .footer_contact-social-list {
+                    display: inline-flex;
+                    list-style: none;
+                    justify-content: center;
+                    font-size: 19px;
+                    & li {
+                        margin: 5px;
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+        & .footer_address {
+            background-color: #707070;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 0px 30px ;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            & .footer_address-content {
+                margin: 20px 5px;
+                width: 200px;
+            }
+            & .footer_address-title {
+                font-size: 23px;
+                color: var(--color-secondary);
+            }
+            & .footer_address-text {
+                margin-top: 20px;
+                color: var(--color-white);
+                font-size: 12px;
+                line-height: 24px;
+            }
+            & .footer_address-text-line {
+                margin-top: 20px;
+                color: var(--color-white);
+                font-size: 12px;
+                line-height: 24px;
+                max-width: 140px;
+                margin-bottom: 30px;
+                padding-bottom: 30px;
+                border-bottom: var(--color-white) 1px solid;
+            }
+            & .footer_address-content-ISO {
+                    & img {
+                        width: 160px;
+                        margin: 10px 0px;
+                    }    
             }
         }
     }
-    & .footer_address {
-        width: 100%;
-        background-color: #707070;
-        padding: 20px;
-        border-radius: 15px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        & .footer_address-content {
-            margin: 0px 5px;
-            max-width: 400px;
-        }
-        & .footer_address-title {
-            font-size: 23px;
+    & .footer_links {
+        border-top: var(--color-white) 1px solid;
+        & .footer_links-title {
+            font-size: 18px;
             color: var(--color-secondary);
+            line-height: 1.2;
+            margin: 10px 0px;
         }
-        & .footer_address-text {
-            margin-top: 20px;
-            color: var(--color-white);
-            font-size: 12px;
-            line-height: 24px;
-
-        }
-        & .footer_address-text-line {
-            margin-top: 20px;
-            color: var(--color-white);
-            font-size: 12px;
-            line-height: 24px;
-            max-width: 140px;
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: var(--color-white) 1px solid;
+        & .footer_links-list {
+            display: inline-flex;
+            margin-top: 10px;
+            & .footer_links-list-element {
+                list-style: none;
+                & a {
+                color: var(--color-white);
+                font-size: 12px;
+                font-weight: 400;
+                margin: 0px 0px 100px 0px;
+                margin-left: 20px;
+                }
+            }
+            & .footer_links-list-element-btn {
+                list-style: none;
+                border-radius: 2em;
+                color: var(--color-white) ;
+                background-color: var(--color-primary);
+                box-shadow: 0 3px 0 var(--color-primary);
+                font-size: 11px;
+                margin-left: 30px;
+                top: -10px;
+                position: relative;
+                padding: 12px;
+                & a {
+                    color: var(--color-white);
+                    
+                }
+            }                
         }
     }
-
+    & .WhatsApp_applicant {
+        & a {
+            position: fixed;
+            bottom: 0px;
+            right: 35px;
+            transition: transform 0.3s;
+            animation: fadeIn 0.7s ease-in forwards;
+            transition: transform 0.3s;
+            & img{
+                width: 75px;
+                height: 75px;   
+            }
+        }
+    }
 }
 
 
